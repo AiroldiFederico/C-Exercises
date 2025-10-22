@@ -14,7 +14,6 @@
 
 
 #include <stdio.h>
-#define ONE_MIN 60
 
 void main(void){
 
