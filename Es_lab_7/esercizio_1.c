@@ -16,8 +16,8 @@ NB: compilazione con gcc Es0a_contaDispariEPrimi.c -lm
 int main(void){
 
 	int mtx [4][4];
-	int i,j,ref,even,odd;
-	i=j=even=odd=0;
+	int i,j,ref,even,odd,prime,isPrime;
+	i=j=even=odd=prime=0;
 
 
 	printf("enter values for a 4x4 matrix\n");
@@ -44,12 +44,43 @@ int main(void){
 			}
 
 			printf("%d ", mtx[a][b]);
+
+
+			isPrime = 1;
+
+			for (int c = 0; c < 4; ++c)
+			{
+				
+				for (int d = 0; d < 4; ++d)
+				{
+					int ma1 = mtx[a][b];
+					int ma2 = mtx[c][d];
+
+					if(ma1 != 1 && ma1 != ma2 && ma2 != 1){
+						int conf = ma1%ma2;
+						if(conf==0){
+							isPrime = 0;
+						}
+					}
+
+					if(ma1 == 1){
+						isPrime = 0;
+					}
+				}
+			}
+
+			if (isPrime == 1){
+				prime++;
+				isPrime = 1;
+			}
+
+
 		}
 		printf("\n");
 	}
 
 
-	printf("\nIn the matrix there are %d even numbers and %d odd numbers", even,odd);
+	printf("\nIn the matrix there are %d even numbers\n%d odd numbers\nand there are a %d prime numbers", even,odd,prime);
 
 	return 0;
 }
