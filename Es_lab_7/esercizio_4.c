@@ -53,7 +53,6 @@ int main(void){
 
 			if (occ >= 2){
 				float w = (1.0)/occ;
-				//printf("\nw is %.1f and occ num is %d\n", w,ref);	
 				ocCount = ocCount + w;
 			}
 
