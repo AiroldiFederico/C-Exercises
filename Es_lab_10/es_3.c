@@ -10,20 +10,18 @@ che compongono il numero in ingresso e ne sono divisori.
 
 int function(int a){
 
-    int num,count=0;
-    for (; a>0;)
+    int num;
+    int count=0;
+    int originale = a;
+    for (; a>0; a/=10)
     {
         num = a%10;
-        if (num == 0)
-        {
+        if (num == 0){
             continue;
         }
-        if (a%num == 0)
-        {
+        if (originale % num == 0){
             count++;
         }
-         a = a/10;
-        
     }
     return count;
 }
