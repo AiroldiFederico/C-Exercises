@@ -1,3 +1,16 @@
+/*
+Questo esercizio testa meno la matematica e molto di più la tua capacità di ragionamento logico con i cicli. Un "punto di sella" in una matrice è un elemento che è contemporaneamente il più piccolo della sua riga e il più grande della sua colonna.
+
+Obiettivo: Ricerche incrociate e ottimizzazione dei cicli.
+
+Dichiara una matrice quadrata 3x3 e popolala (ti consiglio di sceglierli tu nel codice per testare casi specifici).
+
+Scrivi una funzione che analizza la matrice per trovare se esiste un punto di sella.
+
+L'algoritmo: Per ogni riga, trova prima il valore minimo e memorizza in quale colonna si trova. Poi, controlla se quel valore è anche il massimo in quella specifica colonna. Se sì, hai trovato il punto di sella e puoi stamparne le coordinate e il valore.
+*/
+
+
 #include <stdio.h>
 
 
